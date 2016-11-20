@@ -167,3 +167,15 @@ cat /tmp/Ransomware.txt | sed -n '/^[0-9]/p' | sed 's/$/,Ransomware/' >> /thre@t
 
 rm /tmp/Ransomware.txt
 
+#==============================================================================
+# TOR Complete List
+#==============================================================================
+
+wget https://www.dan.me.uk/torlist/ -O /tmp/torlist.txt --no-check-certificate -N
+
+echo "# Generated: `date`" > /thre@tint3ll/torlist.csv
+
+cat /tmp/torlist.txt | sed -n '/^[0-9]/p' | sed 's/$/,TOR_LIST/' >> /thre@tint3ll/torlist.csv
+
+rm /tmp/torlist.txt
+
